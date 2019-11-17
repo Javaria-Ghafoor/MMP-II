@@ -15,9 +15,9 @@ except:
 """
 x = 3
 print(x)
-x = int(x + 6 - 2*x)
+x = x + 6 - 2*x
 print(x)
-y = int(4/x)                 # because I want x and y to be integers
+y = int(4/x)                 # because I want y to be an integer
 print(y)
 #   the remainder operator '%'
 x = -2

@@ -8,7 +8,7 @@ try:
 except:
     print('you cannot divide with zero')
 
-#   Integer Operators:
+#   Integer Operations:
 """
     playing with '+', '-', '*', '/' operators while learning how the value returned by the expression on the right side 
     of the assignment operator '=' is assigned to the left hand side

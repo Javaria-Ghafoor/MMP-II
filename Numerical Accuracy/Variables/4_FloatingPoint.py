@@ -39,6 +39,37 @@ print(x)
 """
     %<width>.<precision>f      (fixed-point form)
     %<width>.<precision>e      (scientific form)
+    note: - if width is too small, the minimum necessary width to print the certain floating point number is used
+          - if precision is set to 0, the output is 
 """
 
-#   in process of completing this file, ZzzZZzzZZzZzzzz
+x = 100.0/7.0
+
+# note the difference in representation of %f and %e when width is not specified
+print('%.3f %.5e' % (x, x))
+
+# specified widths and precisions
+print('%10.5f %20.3e' % (x, x))
+
+# if width is too small, the minimum necessary width to print the certain floating point number is used (%7.3e case)
+print('%7.3f %7.3e' % (x, x))
+
+# a precision of 0 prints in integer form
+print('%.0f %.0e' % (x, x))
+
+# if you're actually reading this repository to learn python, I leave you to think on the following case :P
+# see where the rounded off numbers start going wrong and think WhY?
+
+print('%.30f %.30f %.30f %.30f' % (8.1, 1e-12, 1e-15, 1e-17))
+# letting x = a tuple
+x = (1.234567890125, 1.23456789012501)
+print('%.20f %.20f' % x)
+print(x[0], x[1])   # x[i] is the (i+1)th element of tuple
+print('%.11f %.11f' % x)
+print(x)
+
+# the %d descriptor:
+x = 12345.6
+y = -x
+print('%.0f %.0f' % (x, y))  # rounds off to whole number
+print('%d %d' % (x, y))   # truncates floating decimal

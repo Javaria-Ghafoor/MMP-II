@@ -36,7 +36,7 @@ plt.title('Midpoint Riemann Sum, N = {}'.format(N))
 
 plt.subplot(1, 3, 3)
 plt.plot(x, y, 'b')
-x_right = x[1:]     # Left endpoints
+x_right = x[1:]     # Right endpoints
 y_right = y[1:]
 plt.plot(x_right, y_right, 'b.', markersize=10)
 plt.bar(x_right, y_right, width=-(b-a)/N, alpha=0.2, align='edge', edgecolor='b')

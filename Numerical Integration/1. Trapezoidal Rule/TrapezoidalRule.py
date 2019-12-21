@@ -12,7 +12,7 @@ def func2(x):       # argument x not being ued in body of this function
 def Trapz(f, a, b, n):       # trapezoidal rule
     h = (b-a)/(n-1)
     I = (1/2)*(f(a)+f(b))*h    # initialize I
-    for j in range(1, n):
+    for j in range(1, n+1):
         I += f(a+j*h)*h      # I = I + func(a+j*h), keep updating I
     return I
 

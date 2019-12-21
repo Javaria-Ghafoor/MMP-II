@@ -10,9 +10,9 @@ def Simpson(f, a, b, n):  # Simpson Rule
         n += 1     # to ensure that n is odd
     h = (b-a)/(n-1)      # no. of intervals = n - 1
     s1 = s2 = 0
-    for i in range(1, n-3, 2):
+    for i in range(1, n-1, 2):
         s1 += f(a+(i-1)*h)
-    for i in range(2, n-2, 2):
+    for i in range(2, n, 2):
         s2 += f(a+(i-1)*h)
     return (h/3)*(f(a)+4*s2+2*s1+f(b))
 
